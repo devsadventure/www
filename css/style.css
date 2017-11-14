@@ -1,0 +1,44 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 레이아웃 설계 */
+
+.container {
+  background-color: silver;
+  height: 100vh;
+}
+
+.header {
+  background-color: yellow;
+  height: 10vh;
+}
+
+.visual {
+  background-color: pink;
+}
+
+.main-content {
+  background-color: blue;
+  height: 60vh;
+}
+
+.group {
+  background-color: lime;
+  height: 20vh;
+}
+
+.slogan {
+  background-color: orange;
+}
+
+.footer-bg {
+  background-color: purple;
+}
+
+.footer {
+  background-color: skyblue;
+}
