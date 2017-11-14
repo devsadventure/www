@@ -1,7 +1,20 @@
 @charset "utf-8";
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 공통 스타일 */
+
+.clearfix::after {
+  content: "";
+  background-color: olive;
+  clear: both;
+  display: block;
 }
 
 
@@ -9,11 +22,6 @@
 
 .container {
   background-color: silver;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .header,
@@ -22,6 +30,7 @@
 .slogan,
 .footer {
   width: 940px;
+  margin: 0 auto;
 }
 
 .header {
@@ -32,20 +41,47 @@
 
 .visual {
   background-color: pink;
+  height: 10vh;
 }
 
 .main-content {
   background-color: blue;
+  padding: 30px 15px;
+  min-height: 400px;
+  /*
   height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  */
 }
 
 .group {
+  margin: 0 15px;
+}
+
+.group1 {
+  width: 250px;
+  float: left;
   background-color: lime;
-  height: 20vh;
+}
+
+.group2 {
+  width: 380px;
+  background-color: teal;
+  float: left;
+}
+
+.group3 {
+  width: 190px;
+  background-color: tomato;
+  float: left;
 }
 
 .slogan {
   background-color: orange;
+  padding: 15px 0;
 }
 
 .footer-bg {
@@ -54,4 +90,5 @@
 
 .footer {
   background-color: skyblue;
+  padding: 15px 0;
 }
