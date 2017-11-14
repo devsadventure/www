@@ -126,3 +126,8 @@ DOM TREE라고 부른다. 문서 안에서 최상위 요소가 HTML이라고 인
     - [VS Code 도움말](https://code.visualstudio.com/docs/editor/codebasics)
 
 - - -
+
+## 예습 (생활코딩)
+
+- [생활코딩 HTML](https://opentutorials.org/course/2039)
+- [생활코딩 CSS](https://opentutorials.org/course/2418)
