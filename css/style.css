@@ -10,11 +10,24 @@
 .container {
   background-color: silver;
   height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+  width: 940px;
 }
 
 .header {
   background-color: yellow;
   height: 10vh;
+  width: 940px;
 }
 
 .visual {
