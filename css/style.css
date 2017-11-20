@@ -1,235 +1,472 @@
 @charset "utf-8";
 @import url("./normalize.css");
 @import url("./fonts.css");
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-/* CSS Reset */
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 
 /* 본문 스타일 */
 
 html {
-  font-size: 10px;
+    font-size: 10px;
 }
+
 body {
-  font-family: 'Noto Sans Regular', sans-serif;
-  font-size: 1.4re;
-  color: #000;
+    font-family: 'Noto Sans Regular', sans-serif;
+    font-size: 1.4rem;
+    color: #181818;
+    background-color: #fff;
 }
-a:link, a:visited {
-  color: inherit;
-  text-decoration: none;
+
+
+/* 링크스타일 */
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
 }
-a:hover, a:focus {
-  color: #f00;
+
+a:hover,
+a:focus {
+    color: #f00;
 }
+
 
 /* 숨김 콘텐츠 */
 
+.readable-hidden,
+.a11y {
+    position: absolute;
+    widows: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
 
-/* 
-.readable-hidden, .a11y {
-  background: red;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-}
 .a11y:focus {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  width: auto;
-  height: auto;
-  margin: 0;
-  clip: rect(auto, auto, auto, auto);
-  background: #000;
-  color: #fff;
-  padding: 5px 10px;
-  transform: translateX(-50%);
-  z-index: 10;
+    top: 5px;
+    left: 50%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: rect(auto, auto, auto, auto);
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    transform: translateX(-50%);
+    z-index: 10;
 }
- */
 
-.readable-hidden, .a11y {
-  background: red;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-}
-.a11y:focus {
-  top: 5px;
-  left: 50%;
-  width: auto;
-  height: auto;
-  margin: 0;
-  background: #000;
-  color: #fff;
-  padding: 5px 10px;
-  clip: rect(auto, auto, auto, auto);
-  transform: translateX(-50%);
-  z-index: 10;
-}
 
 /* 공통 스타일 */
 
 .clearfix::after {
-  content: "";
-  background-color: olive;
-  clear: both;
-  display: block;
+    content: "";
+    background-color: olive;
+    clear: both;
+    display: block;
 }
+
 
 /* 레이아웃 설계 */
 
 .container {
-  background-color: silver;
+    background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #eee 50%, #fff 100%) repeat;
 }
-.header, .visual, .main-content, .slogan, .footer {
-  width: 940px;
-  margin: 0 auto;
+
+.header,
+.visual,
+.main-content,
+.slogan,
+.footer {
+    width: 940px;
+    margin: 0 auto;
 }
+
 
 /* 헤더 */
 
 .header {
-  background-color: white;
-  position: relative;
-  padding: 0 30px 30px;
-  border-radius: 0 0 15px 15px;
+    background-color: white;
+    position: relative;
+    padding: 0 30px 30px;
+    border-radius: 0 0 15px 15px;
 }
+
 
 /* 로고 */
 
 .logo {
-  /* position: fixed; viewport 기준 */
-  position: absolute;
-  top: 48px;
-  left: 65px;
-  /* position: abolsute를 주는 순간 block이 되면서 layer가 된다. layer가 되려면 크기가 필요한데, 
-  width, height값을 안줘서 콘텐츠 크기에 맞게 조정됨. */
+    position: absolute;
+    top: 48px;
+    left: 65px;
 }
+
 
 /* 멤버 링크 */
 
 .member {
-  text-transform: uppercase;
-  font-size: 0;
-  text-align: right;
-  transform: translateX(10px);
+    text-transform: uppercase;
+    font-size: 0;
+    text-align: right;
+    transform: translateX(10px);
 }
+
 .member li {
-  display: inline-block;
-  font-size: 1.4rem;
-  padding: 10px 0;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 10px 0;
 }
+
 .member li:nth-child(n+2)::before {
-  content: ":";
+    content: ":";
 }
+
 .member a {
-  padding: 8px 10px;
+    padding: 8px 10px;
 }
-.member a:focus {
-  outline: 1px solid #00e;
-  outline-offset: -5px;
-}
+
 
 /* 메인 메뉴 */
 
 .main-menu {
-  background: linear-gradient(to bottom, #efc22f 0%, #b75b00 25%, #db7800 68%, #db7800 75%, #efc22f 100%);
-  background-color: #b75b00;
-  border-top: 2px solid #000;
-  border-radius: 0 0 5px 5px;
-  height: 47px;
-  padding-left: 225px;
+    background: linear-gradient(to bottom, #efc22f 0%, #b75b00 25%, #db7800 68%, #db7800 75%, #efc22f 100%);
+    background-color: #b75b00;
+    border-top: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    height: 47px;
+    padding-left: 225px;
 }
+
 .main-menu>li {
-  float: left;
-  line-height: 45px;
+    float: left;
+    position: relative;
 }
+
+.main-menu>li:focus {
+    outline: none;
+}
+
 .main-menu span {
-  display: block;
-  font-size: 1.6rem;
-  font-family: "Noto Sans Bold";
-  color: #fff;
-  padding: 0 20px;
-  cursor: pointer;
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  text-shadow: 1px 0 0 #181818, 0 1px 0 #181818, -1px 0 0 #181818, 0 -1px 0 #181818;
+    line-height: 45px;
+    display: block;
+    font-size: 1.6rem;
+    font-family: "Noto Sans Bold";
+    color: #fff;
+    padding: 0 20px;
+    cursor: pointer;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    text-shadow: 1px 0 0 #181818, 0 1px 0 #181818, -1px 0 0 #181818, 0 -1px 0 #181818;
 }
-.main-menu span:hover, .main-menu>li:focus span {
-  color: #ffff00;
+
+.main-menu span:hover::after,
+.main-menu>li:focus span::after {
+    content: "";
+    display: block;
+    border-top: 2px solid #000;
 }
+
+.main-menu li:hover span,
+.main-menu>li:focus span {
+    color: #ffff00;
+}
+
 .sub-menu {
-  background: yellow;
-  position: absolute;
+    position: absolute;
+    top: 47px;
+    white-space: nowrap;
+    display: none;
 }
+
+.menu-act {
+    display: block !important;
+}
+
+.about-html {
+    left: 0;
+}
+
+.about-css {
+    left: 0;
+}
+
+.web-standards {
+    left: 0;
+}
+
+.web-accessibility {
+    right: 0;
+}
+
+.qna {
+    right: 0;
+}
+
+.archive {
+    right: 0;
+}
+
+.sub-menu li,
+.sub-menu a {
+    display: inline-block;
+}
+
+.sub-menu a {
+    padding: 4px 10px 4px 0;
+}
+
+.sub-menu a::before {
+    content: '\e803';
+    font-family: "fontello";
+    margin: 5px;
+}
+
+.sub-menu a:hover::before {
+    content: '\f111';
+}
+
 
 /* 비주얼 */
 
-.visual {
-  background-color: pink;
-  height: 120px;
+@keyframes text-ani {
+    0% {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 1);
+        /*     transform: translate(0, 0); */
+        top: 0;
+        left: 0;
+    }
+    100% {
+        font-size: 24px;
+        color: rgba(0, 0, 0, 1);
+        transform: translate(400px, 70px);
+    }
 }
+
+@keyframes flower-ani {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.visual {
+    height: 120px;
+    position: relative;
+}
+
+.visual::before,
+.visual::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: flower-ani 2s alternate;
+}
+
+.visual::before {
+    background: url("images/ani_flower_01.png") no-repeat 0 -15px, url("images/ani_flower_02.png") no-repeat 670px 0;
+}
+
+.visual::after {
+    background: url("images/ani_flower_03.png") no-repeat 300px -15px, url("images/ani_flower_04.png") no-repeat 800px 0;
+    animation-delay: 1s;
+}
+
+
+/* .visual::before {
+  background: url("images/ani_flower_01.png") no-repeat 0 -15px, url("images/ani_flower_02.png") no-repeat 670px 0;
+  animation: flower-ani 12s forwards infinite;
+}
+.visual::after {
+  background: url("images/ani_flower_03.png") no-repeat 300px -15px, url("images/ani_flower_04.png") no-repeat 800px 0;
+  animation: flower-ani 12s reverse forwards infinite;
+}
+@keyframes flower-ani {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
+
+.visual-text {
+    position: absolute;
+    animation-direction: reverse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: text-ani 2s forwards ease-in-out;
+}
+
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  background: lime;
+  border: 2px solid #000;
+  transition: all 2s ease-in-out;
+}
+.box-act {
+  border-radius: 50%;
+  background: aqua;
+} */
+
+
+/* 메인 콘텐츠 */
+
 .main-content {
-  background-color: blue;
-  padding: 30px 15px;
-  min-height: 400px;
-  /* height: 60vh;
+    background-color: white;
+    padding: 30px 15px;
+    min-height: 400px;
+    /* height: 60vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center; */
 }
+
 .group {
-  margin: 0 15px;
+    margin: 0 15px;
 }
+
 .group1 {
-  width: 250px;
-  float: left;
-  background-color: lime;
+    width: 250px;
+    float: left;
+    background-color: lime;
 }
+
 .group2 {
-  width: 380px;
-  float: left;
-  background-color: teal;
+    width: 380px;
+    float: left;
+    background-color: teal;
 }
+
 .group3 {
-  width: 190px;
-  float: left;
-  background-color: tomato;
+    width: 190px;
+    float: left;
+    background-color: tomato;
 }
+
 .slogan {
-  background-color: orange;
-  padding: 15px 0;
+    background-color: orange;
+    padding: 15px 0;
 }
+
 .footer-bg {
-  background-color: purple;
+    background-color: purple;
 }
+
 .footer {
-  background-color: skyblue;
-  padding: 15px 0;
+    background-color: skyblue;
+    padding: 15px 0;
 }
