@@ -49,7 +49,7 @@ a:hover, a:focus {
 
 .readable-hidden, .a11y, legend {
   position: absolute;
-  widows: 1px;
+  width: 1px;
   height: 1px;
   overflow: hidden;
   margin: -1px;
@@ -81,7 +81,7 @@ a:hover, a:focus {
 /* 레이아웃 설계 */
 
 .container {
-  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #eee 50%, #fff 100%) repeat;
+  background: url("images/bg_flower.png") no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #eee 50%, #fff 100%);
 }
 .header, .visual, .main-content, .slogan, .footer {
   width: 940px;
@@ -208,10 +208,8 @@ a:hover, a:focus {
 @keyframes text-ani {
   0% {
     font-size: 12px;
-    color: rgba(0, 0, 0, 1);
-    /*     transform: translate(0, 0); */
-    top: 0;
-    left: 0;
+    color: rgba(0, 0, 0, 0);
+    transform: translate(0, 0);
   }
   100% {
     font-size: 24px;
@@ -232,48 +230,27 @@ a:hover, a:focus {
   position: relative;
 }
 .visual::before, .visual::after {
+  animation: flower-ani 2s infinite alternate;
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  animation: flower-ani 2s alternate;
 }
 .visual::before {
   background: url("images/ani_flower_01.png") no-repeat 0 -15px, url("images/ani_flower_02.png") no-repeat 670px 0;
 }
 .visual::after {
-  background: url("images/ani_flower_03.png") no-repeat 300px -15px, url("images/ani_flower_04.png") no-repeat 800px 0;
   animation-delay: 1s;
+  background: url("images/ani_flower_03.png") no-repeat 300px 0, url("images/ani_flower_04.png") no-repeat 800px 0;
 }
-
-/* .visual::before {
-  background: url("images/ani_flower_01.png") no-repeat 0 -15px, url("images/ani_flower_02.png") no-repeat 670px 0;
-  animation: flower-ani 12s forwards infinite;
-}
-.visual::after {
-  background: url("images/ani_flower_03.png") no-repeat 300px -15px, url("images/ani_flower_04.png") no-repeat 800px 0;
-  animation: flower-ani 12s reverse forwards infinite;
-}
-@keyframes flower-ani {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-} */
-
 .visual-text {
   position: absolute;
-  animation-direction: reverse;
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation: text-ani 2s forwards ease-in-out;
 }
+
 
 /* .box {
   width: 100px;
@@ -426,7 +403,7 @@ a:hover, a:focus {
 
 .term {
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 10px 10px;
   border: 1px solid #aaa;
   border-radius: 10px;
   background: linear-gradient(to bottom, #eee, #ccc);
@@ -436,38 +413,44 @@ a:hover, a:focus {
   font-family: "Noto Sans Bold";
 }
 .term-list {
-  margin-top: 10px;
+  margin-top: 5px;
   overflow: hidden;
 }
 .term-list-heading, .term-list-brief {
-  width: 145px;
+  width: 150px;
   float: right;
 }
 .term-list-heading {
-  color: blue;
   font-weight: bold;
   margin-top: -5px;
 }
 .term-list-brief {
-  margin-top: 5px;
+  font-size: 1.1rem;
+  margin: 4px 0 10px 0;
   line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 4.5em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .term-list-thumbnail {
   float: left;
+  background: pink;
+  margin-bottom: 5px;
+}
+.term-list dt:nth-of-type(2),
+.term-list dd:nth-of-type(4) {
+  float: left;
 }
 
-/* .term-list dt:nth-child(3n+1):nth-child(even) {
- background: yellow;
- float: left;
+.term-list dd:nth-of-type(3) {
+  float: right;
 }
-.term-list dd:nth-of-type(2n+1) {
- background: pink;
- float: right;
-}
-.term-list dd:nth-of-type(4n+4) {
- background: purple;
-}
- */
+
 
 
 /* 검색 폼 */
@@ -538,8 +521,9 @@ a:hover, a:focus {
   list-style: square;
   padding: 40px 0 0 20px;
 }
-.notice-list li, .pds-list li {
-  margin: 5px 0;
+.notice-list li,
+.pds-list li {
+  margin: 2px 0;
 }
 .notice-list a, .pds-list a {
   width: 285px;
@@ -562,6 +546,7 @@ a:hover, a:focus {
   font-family: "fontello";
   color: hsla(90, 90%, 30%, 1);
   margin-right: 5px;
+  padding: 5px;
 }
 .notice-list, .pds-list, .notice-more, .pds-more {
   display: none;
@@ -622,6 +607,126 @@ a:hover, a:focus {
   justify-content: space-between;
 }
  */
+
+ /* 새소식 */
+
+/* .news{
+  background: lime;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+
+}
+.news-heading{
+  background: pink;
+  color: orange;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Noto Sans Bold";
+  font-size: 1.5rem;
+}
+.news-line{
+  display: block;
+  margin-top: 25px;
+  border-top: 1px solid #000;
+}
+.news-more{
+  background: burlywood;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.news-item{
+  margin-top: 4px;
+}
+.news-item figure{
+  position: absolute;
+  top: 40px;
+  left: 0;
+}
+  .news-item h3,
+.news-item time,
+.news-item p {
+  float: right;
+  width: 250px;
+  background: gold;
+}
+.news-item h3{
+  font-family: "Noto Sans Bold";
+  margin-bottom: 5px;
+}
+.news-item figure img{
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.news-item figcaption{
+  padding: 10px;
+  text-align: center;
+} */
+
+.news{
+  margin-top: 20px;
+  position: relative;
+}
+.news::before{
+  content: "";
+  background: #aaa linear-gradient(to right, #666, #eee);
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+}
+.news-heading{
+  font-family: "Noto Sans Bold", sans-serif;
+  font-size: 1.5rem;
+  color: #ff7b00;
+}
+/* ~: 틸드기호. 뒤에 나오는 선택자를 모두 선택한다. */
+/* +: 인접한 형제만 선택한다. */
+.news-heading+a{
+  display: block;
+}
+.news-heading+a:hover, .news-heading+a:focus{
+  color: inherit;
+}
+.news-item{
+  margin-top: 30px;
+  padding-left: 130px;
+  min-height: 115px;
+  position: relative;
+}
+.news-item h3{
+  font-weight: bold;
+}
+.news-item time{
+  display: block;
+  margin: 5px 0 10px;
+}
+.news-item figure{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.news-item img{
+  margin-bottom: 15px;
+  box-shadow: 0 15px 15px 2px #aaa;
+}
+.news-more{
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+.news-more::before{
+    content: '\e802';
+    font-family: "fontello";
+    color: hsla(90, 90%, 30%, 1);
+    margin-right: 5px;
+    padding: 5px;
+}
+/* 어떤 경우에 padding/margin을 주는지?: 여백의 시작점에서 시작하려면 padding을 사용 */
 
 
 /* 슬로건 */
