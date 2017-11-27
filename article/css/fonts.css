@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('font/Oswald-Regular.ttf');
+    src: url('font/Oswald-Regular.ttf') format('truetype'), url('font/Oswald-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Oswald Bold';
+    src: url('font/Oswald-Bold.ttf');
+    src: url('font/Oswald-Bold.ttf') format('truetype'), url('font/Oswald-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: "PT Serif";
+    src: url('font/PT_Serif-Web-Regular.ttf');
+    src: url('font/PT_Serif-Web-Regular.ttf') format('truetype'), url('font/PT_Serif-Web-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Serif Bold';
+    src: url('font/PT_Serif_Web-Bold.ttf');
+    src: url('font/PT_Serif_Web-Bold.ttf') format('truetype'), url('font/PT_Serif_Web-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: "PT Serif Italic";
+    src: url('font/PT_Serif_Web-Italic.ttf');
+    src: url('font/PT_Serif_Web-Italic.ttf') format('truetype'), url('font/PT_Serif_Web-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: "Varela Round";
+    src: url('font/VarelaRound-Regular.ttf');
+    src: url('font/VarelaRound-Regular.ttf') format('truetype'), url('font/VarelaRound-Regular.woff') format('woff');
+}
