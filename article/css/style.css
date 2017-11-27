@@ -170,7 +170,7 @@ a:focus {
 .nav {
     width: 62.5%;
     min-width: 600px;
-    margin: 0 25% 0 12.5%;
+    margin: 0 25% 45px 12.5%;
 }
 
 
@@ -219,20 +219,12 @@ a:focus {
 
 .heading {
     margin-top: 25px;
+    position: relative;
 }
 
 .heading h1 {
     width: 480px;
     font-size: 4.8rem;
-}
-
-.icon-bookmark {
-    position: absolute;
-    left: 76px;
-}
-
-.icon-bookmark a {
-    padding: 10px;
 }
 
 .content-heading {
@@ -243,6 +235,12 @@ a:focus {
     line-height: 1.5;
     text-align: left;
     color: #868686;
+}
+
+.icon-bookmark {
+    position: absolute;
+    left: -30px;
+    top: 230px;
 }
 
 
@@ -308,11 +306,22 @@ a:focus {
 .btn-photo .prev,
 .btn-photo .next {
     margin-top: 41px;
-    background: silver;
     width: 60px;
     height: 60px;
     border-radius: 0;
     border: solid 1px #ececec;
+}
+
+.btn-photo .prev::before {
+    content: '\f104';
+    font-family: 'fontello';
+    color: #ececec;
+}
+
+.btn-photo .next::before {
+    content: '\f105';
+    font-family: 'fontello';
+        color: #ececec;
 }
 
 
@@ -342,15 +351,17 @@ a:focus {
 /* 인용구 */
 
 .quotation {
+    margin-top: 48px;
     position: relative;
 }
 
 .img-quote {
-    margin-left: -20px;
+    position: absolute;
+    left: -30px;
+    top: 0;
 }
 
 .quotation blockquote {
-    margin-top: 48px;
     width: 357px;
     height: 224px;
     font-family: 'PT Serif';
@@ -362,30 +373,36 @@ a:focus {
     float: left;
 }
 
-.profile{
+.profile {
     position: absolute;
     margin-left: 400px;
 }
 
+.profile img {
+    border-radius: 60px;
+}
+
 .quotation figcaption .name {
-    padding: 20px 0 10px 0;
+    margin-top: 20px;
     font-family: 'Varela Round';
     font-size: 1.4rem;
     line-height: 1.14;
     text-align: left;
     color: #222222;
-    position: absolute;
 }
 
 .quotation figcaption .nation {
-    width: 84px;
-    height: 12px;
     font-family: 'PT Serif';
-    font-size: 12px;
+    font-size: 1.2rem;
     font-style: italic;
     line-height: 1.5;
     text-align: left;
     color: #b8b8b8;
+    padding-top: 10px;
+}
+
+.more {
+    margin-top: 47px;
 }
 
 .more1 {
@@ -444,16 +461,40 @@ a:focus {
     background: #215b9a;
 }
 
+.facebook::before {
+    content: '\f09a';
+    font-family: 'fontello';
+    color: #fff;
+}
+
 .twitter {
     background: #00adf2;
+}
+
+.twitter::before {
+    content: '\f099';
+    font-family: 'fontello';
+    color: #fff;
 }
 
 .google {
     background: #ce4435;
 }
 
+.google::before {
+    content: '\f30f';
+    font-family: 'fontello';
+    color: #fff;
+}
+
 .pinterest {
     background: #e51616;
+}
+
+.pinterest::before {
+    content: '\f231';
+    font-family: 'fontello';
+    color: #fff;
 }
 
 

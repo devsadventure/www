@@ -33,3 +33,10 @@
     src: url('font/VarelaRound-Regular.ttf');
     src: url('font/VarelaRound-Regular.ttf') format('truetype'), url('font/VarelaRound-Regular.woff') format('woff');
 }
+@font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot?90398914');
+    src: url('font/fontello.eot?90398914#iefix') format('embedded-opentype'), url('font/fontello.woff2?90398914') format('woff2'), url('font/fontello.woff?90398914') format('woff'), url('font/fontello.ttf?90398914') format('truetype'), url('font/fontello.svg?90398914#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
