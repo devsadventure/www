@@ -1,0 +1,531 @@
+@charset "utf-8";
+@import url("fonts.css");
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* CSS Reset */
+
+html,
+body,
+button,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* 본문 스타일 */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Valera Round Regular', sans-serif;
+    font-size: 1.6rem;
+    color: #181818;
+    background-color: #fff;
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+/* 링크 스타일 */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #f00;
+}
+
+
+/* 숨김 콘텐츠 */
+
+.readable-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+/* 공통 스타일 */
+
+.clearfix::after {
+    content: "";
+    background-color: olive;
+    clear: both;
+    display: block;
+}
+
+
+/* 레이아웃 */
+
+.header {
+    width: 75%;
+    margin: 127px 120px 0 120px;
+}
+
+.heading,
+.content-content,
+.content-subcontent,
+.more,
+.bg-image figcaption,
+.btn-photo,
+.btn-sns,
+.nav {
+    width: 62.5%;
+    min-width: 600px;
+    margin: 0 25% 45px 12.5%;
+}
+
+
+/* 헤더 */
+
+.header {
+    position: relative;
+}
+
+.location {
+    display: inline-block;
+    font-family: 'Oswald';
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1f4ba5;
+}
+
+.header time {
+    display: inline-block;
+    margin-left: 30px;
+    font-family: 'PT Serif';
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b8b8b8;
+}
+
+.writer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #868686;
+}
+
+.writer span:first-child {
+    font-family: 'PT Serif';
+    font-style: italic;
+}
+
+.name {
+    font-family: Oswald;
+    font-weight: bold;
+}
+
+
+/* 메인 섹션 */
+
+.heading {
+    margin-top: 25px;
+    position: relative;
+}
+
+.heading h1 {
+    width: 480px;
+    font-size: 4.8rem;
+    font-family: 'Varela Round';
+}
+
+.content-heading {
+    margin-top: 50px;
+    font-family: 'PT Serif';
+    font-size: 2.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: left;
+    color: #868686;
+}
+
+.icon-bookmark {
+    position: absolute;
+    left: -30px;
+    top: 230px;
+}
+
+
+/* 중간 이미지 */
+
+.sub-section {
+    margin-top: 45px;
+}
+
+.bg-image img {
+    display: block;
+    margin: 0 auto;
+}
+
+.bg-image figcaption {
+    margin-top: 30px;
+    font-family: 'PT Serif';
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b8b8b8;
+}
+
+
+/* 콘텐츠 */
+
+.content-content {
+    margin-top: 50px;
+    font-family: 'Varela Round';
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #868686;
+}
+
+
+/* 사진 슬라이드 */
+
+.slide {
+    margin: 0 auto;
+    margin-top: 57px;
+    display: block;
+    width: 970px;
+    font-size: 0;
+}
+
+.slide figure {
+    display: inline-block;
+}
+
+.slide figure .figcaption {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'PT Serif';
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+    color: #b8b8b8;
+    margin-top: 49px;
+}
+
+.btn-photo{
+    margin-top: 41px;
+    display: flex;
+}
+.btn-photo .prev,
+.btn-photo .next {
+    width: 60px;
+    height: 60px;
+    border-radius: 0;
+    border: solid 1px #ececec;
+    background: #fff;
+    display: block;
+}
+
+.btn-photo .prev::before {
+    content: '\f104';
+    font-family: 'fontello';
+    color: #ececec;
+}
+
+.btn-photo .next::before {
+    content: '\f105';
+    font-family: 'fontello';
+    color: #ececec;
+}
+
+
+/* 중간 콘텐츠 */
+
+.content-subcontent {
+    margin-top: 50px;
+}
+
+.subcontent-heading {
+    width: 543px;
+    font-family: 'Varela Round';
+    font-size: 3rem;
+    color: #222222;
+}
+
+.content-subcontent p {
+    margin-top: 58px;
+    font-family: 'Varela Round';
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #868686;
+}
+
+
+/* 인용구 */
+
+.quotation {
+    margin-top: 48px;
+    position: relative;
+}
+
+.img-quote {
+    position: absolute;
+    left: -30px;
+    top: 0;
+}
+
+.quotation blockquote {
+    width: 357px;
+    height: 224px;
+    font-family: 'PT Serif';
+    font-size: 1.8rem;
+    font-style: italic;
+    line-height: 1.67;
+    text-align: left;
+    color: #222222;
+    float: left;
+}
+
+.profile {
+    position: absolute;
+    margin-left: 400px;
+}
+
+.profile img {
+    border-radius: 60px;
+}
+
+.quotation figcaption .name {
+    margin-top: 20px;
+    font-family: 'Varela Round';
+    font-size: 1.4rem;
+    line-height: 1.14;
+    text-align: left;
+    color: #222222;
+}
+
+.quotation figcaption .nation {
+    font-family: 'PT Serif';
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: left;
+    color: #b8b8b8;
+    padding-top: 10px;
+}
+
+.more {
+    margin-top: 47px;
+}
+
+.more1 {
+    float: left;
+    width: 270px;
+}
+
+.more1 h3,
+.more2 h3 {
+    font-family: 'Varela Round';
+    font-size: 1.8rem;
+    color: #222222;
+}
+
+.more2 {
+    float: right;
+    width: 270px;
+}
+
+.more1 p,
+.more2 p {
+    font-family: 'Varela Round';
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #868686;
+}
+
+
+/* 늑대 동영상 */
+
+.video {
+    margin-top: 48px;
+}
+
+.video .figcaption {
+    font-family: 'PT Serif';
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: #b8b8b8;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+/* SNS 공유 버튼 */
+
+.btn-sns {
+    margin-top: 56px;
+}
+
+.btn-sns li {
+    display: inline-block;
+    padding: 2px 5px;
+    width: 85px;
+    height: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.facebook {
+    background: #215b9a;
+}
+
+.facebook::before {
+    content: '\f09a';
+    font-family: 'fontello';
+    color: #fff;
+}
+
+.twitter {
+    background: #00adf2;
+}
+
+.twitter::before {
+    content: '\f099';
+    font-family: 'fontello';
+    color: #fff;
+}
+
+.google {
+    background: #ce4435;
+}
+
+.google::before {
+    content: '\f30f';
+    font-family: 'fontello';
+    color: #fff;
+}
+
+.pinterest {
+    background: #e51616;
+}
+
+.pinterest::before {
+    content: '\f231';
+    font-family: 'fontello';
+    color: #fff;
+}
+
+
+/* 이동 네비게이션 */
+
+.nav {
+    margin-top: 43px;
+    margin-bottom: 42px;
+}
+
+.nav span::before {
+    content: "";
+}
+
+.nav span {
+    font-family: 'Varela Round';
+    font-size: 1.2rem;
+    color: #1f4ba5;
+}
